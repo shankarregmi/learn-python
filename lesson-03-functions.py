@@ -52,4 +52,14 @@ increment = func(10)
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 doubled = map(lambda num: num * 2, nums)
-print(list(doubled))
+# print(list(doubled))
+
+
+
+# Function Annotations
+
+def greet2(name: str):
+    print('Hello {}'.format(name))
+
+greet2('Shankar')
+print(greet2.__annotations__)
