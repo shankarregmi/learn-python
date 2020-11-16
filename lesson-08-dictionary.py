@@ -13,7 +13,7 @@ obj1 = {
 list(obj1)  # print keys ['name', 'address', 'age']
 obj1.get('name') # Shankar
 obj1.keys() # keys
-obj1.value() # values
+obj1.values() # values
 
 for key, value in obj1.items():
     print('{0} : {1}'.format(key, value))
