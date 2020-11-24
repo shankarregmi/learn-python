@@ -1,17 +1,19 @@
 import time
 
-def timer(func):
-    def wrapper(*args):
+
+def logger(func):
+    def wrapper(*args, **kwargs):
         before = time.time()
-        val = func(*args)
+        print('Starting function call')
+        val = func(*args, **kwargs)
         print(f'Function took {time.time() - before} seconds')
         return val
     return wrapper
 
 
-@timer
-def run(seconds):
-    time.sleep(seconds)
+@logger
+def greet(name):
+    print(f'Hello !! {name}')
 
 
-run(3)
+greet('Shankar')
